@@ -1,0 +1,102 @@
+.stepBar {
+  /* 요소 배치 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  /* 크기 */
+  width: 1100px;
+}
+
+.stepBar__label {
+  /*폰트*/
+  font-size: 24px;
+  font-family: "pretendardB";
+  letter-spacing: -8%;
+  color: var(--text-color);
+}
+
+.stepBar__label > span {
+  color: var(--main-color2);
+}
+
+.stepBar__step {
+  /* 요소 배치 */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stepBar__stepNum {
+  /* 요소 배치 */
+  display: flex;
+  justify-content: center;
+  gap: 465px;
+  /* 크기 */
+  width: 1000px;
+}
+
+.stepBar__stepNum > div {
+  /* 요소 배치 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 크기 */
+  width: 20px;
+  height: 20px;
+  /* 폰트 */
+  font-size: 16px;
+}
+
+.stepBar__num {
+  border: 5px solid var(--line-color);
+  border-radius: 50%;
+
+  color: var(--text-color2);
+}
+
+.stepBar__num--COMPLETE {
+  border: 5px solid var(--sub-color);
+  border-radius: 50%;
+
+  color: var(--main-color2);
+}
+
+.stepBar__bar {
+  /* 크기 */
+  width: 1000px;
+  height: 12px;
+  /* 모서리 */
+  border-radius: 50px;
+  /* 내부 색, 반만 파랑 */
+  background: linear-gradient(
+    to right,
+    var(--main-color2) 50%,
+    var(--line-color) 50%
+  );
+}
+
+.stepBar__bar--COMPLETE {
+  /* 내부 색, 전체 파랑 */
+  background: linear-gradient(
+    to right,
+    var(--main-color2) 50%,
+    var(--main-color2) 50%
+  );
+}
+
+.stepBar__stepLabel {
+  display: flex;
+}
+
+.stepBar__stepLabel > div {
+  width: 500px;
+  text-align: center;
+}
+
+.stepBar__text {
+  color: var(--text-color2);
+}
+.stepBar__text--COMPLETE {
+  color: var(--main-color2);
+}
