@@ -1,0 +1,263 @@
+.profileForm {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.profileForm__infoSection {
+  display: flex;
+  gap: 50px;
+}
+
+.profileForm__picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.profileForm__picture > img {
+  width: 300px;
+  height: 300px;
+  border: 1px solid var(--line-color);
+  border-radius: 50%;
+}
+
+.profileForm__picture > button {
+  position: absolute;
+}
+
+.profileForm__label {
+  font-size: 24px;
+  font-family: "pretendardB";
+  letter-spacing: -8%;
+}
+
+.profileForm__info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1;
+  gap: 20px;
+}
+
+.profileForm__info > .profileForm__label {
+  margin-left: 30px;
+}
+
+.profileForm__formLabel {
+  font-size: 16px;
+  font-family: "pretendardB";
+  letter-spacing: -8%;
+  width: 65px;
+}
+
+.profileForm__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.profileForm__name,
+.profileForm__bio,
+.profileForm__age,
+.profileForm__sns {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  height: fit-content;
+}
+
+.profileForm__name > input,
+.profileForm__bio > input {
+  /*크기*/
+  height: 40px;
+  /*테두리*/
+  border: 1px solid var(--line-color);
+  border-radius: 8px;
+  /*패딩*/
+  padding-left: 10px;
+  /*텍스트*/
+  font-size: 16px;
+  color: var(--text-color);
+
+  &:focus {
+    border: 2px solid var(--main-color2);
+    outline: none; /* 기본 outline 제거 */
+  }
+}
+
+.profileForm__name > input {
+  width: 180px;
+}
+
+.profileForm__bio > input {
+  width: 417px;
+}
+
+.profileForm__bio > .profileForm__formLabel {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  line-height: 19px;
+}
+
+.profileForm__bio > .profileForm__formLabel > span {
+  font-size: 14px;
+  font-family: "pretendardM";
+  color: var(--text-color2);
+  line-height: 17px;
+}
+
+.profileForm__ageBox {
+  /*크기*/
+  width: 180px;
+  height: 40px;
+  /*테두리*/
+  border: 1px solid var(--line-color);
+  border-radius: 8px;
+  /*패딩*/
+  padding-left: 10px;
+  /*텍스트*/
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+.profileForm__sns {
+  align-items: flex-start;
+  position: relative;
+}
+
+.profileForm__sns > .profileForm__formLabel {
+  text-align: center;
+  width: 50px;
+}
+
+.profileForm__link {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /*max-height: 150px;
+  overflow-y: auto;*/
+}
+
+.profileForm__link > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* 스크롤바 스타일링 */
+.profileForm__link::-webkit-scrollbar {
+  width: 8px; /* 스크롤바 너비 */
+}
+
+.profileForm__link::-webkit-scrollbar-track {
+  background: var(--dimmed); /* 스크롤바 트랙 색상 */
+  border-radius: 10px; /* 스크롤바 트랙 둥글기 */
+}
+
+.profileForm__link::-webkit-scrollbar-thumb {
+  background: var(--line-color); /* 스크롤바 색상 */
+  border-radius: 10px; /* 스크롤바 둥글기 */
+}
+
+.profileForm__link::-webkit-scrollbar-thumb:hover {
+  background: var(--text-color2); /* 스크롤바 색상 (hover) */
+}
+
+.profileForm__introSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileForm__introSection > textarea {
+  resize: none;
+  width: 1200px;
+  height: 170px;
+
+  border: 1px solid var(--line-color);
+  border-radius: 4px;
+
+  font-size: 14px;
+  padding: 20px;
+
+  &:focus {
+    border: 2px solid var(--main-color2);
+    outline: none; /* 기본 outline 제거 */
+  }
+}
+
+.profileForm__skillSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileForm__skillsTop {
+  display: flex;
+  gap: 20px;
+}
+
+.profileForm__searchBar {
+  width: 558px;
+  height: 40px;
+
+  border: 1px solid var(--line-color);
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding-left: 10px;
+}
+
+.profileForm__searchBar > input {
+  width: 500px;
+
+  padding-left: 10px;
+
+  &:focus {
+    border: 0;
+    outline: none; /* 기본 outline 제거 */
+  }
+}
+
+.profileForm__innerLabel,
+.profileForm__innerLabel > span {
+  font-size: 14px;
+  color: var(--text-color);
+
+  display: flex;
+  gap: 25px;
+
+  margin: 5px 0px;
+}
+
+.profileForm__innerLabel--POINT {
+  color: var(--point);
+  margin-left: 100px;
+  margin-top: 5px;
+}
+
+.profileForm__innerLabel > span {
+  margin-left: 25px;
+}
+
+.profileForm__skillRange {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.profileForm__searchBar > button {
+  width: fit-content;
+  height: fit-content;
+
+  display: flex;
+  align-items: center;
+}
+
+.profileForm__save {
+  align-self: flex-end;
+}
