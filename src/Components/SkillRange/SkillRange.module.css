@@ -1,0 +1,65 @@
+.skillRange {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.skillRange__skillName {
+  width: 100px;
+  height: 25px;
+
+  background-color: var(--select-color);
+  border-radius: 50px;
+
+  text-align: center;
+  font-size: 14px;
+  font-family: "pretendardB";
+}
+/*연한 부분*/
+.skillRange__slide {
+  position: relative;
+  width: 450px;
+  height: 11px;
+  border-radius: 5.5px;
+  background-color: var(--sub-color);
+  display: flex;
+  align-items: center;
+}
+/*진한 부분*/
+.skillRange__track {
+  position: absolute;
+  /*최대 너비만 지정한 후 값에 따른 너비는 인라인 스타일로 적용*/
+  max-width: 450px;
+  height: 11px;
+  border-radius: 5.5px;
+  background-color: var(--sub-color2);
+}
+
+.skillRange__slide > input[type="range"] {
+  width: 450px;
+  background: transparent;
+  position: absolute;
+  pointer-events: none;
+  /*기본 스타일 제거*/
+  -webkit-appearance: none;
+  appearance: none;
+
+  /*동그란 부분*/
+  &::-webkit-slider-thumb {
+    width: 17px;
+    height: 17px;
+    background-color: var(--sub-color2);
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto;
+    /*기본 스타일 제거*/
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
+
+.skillRange__value {
+  font-size: 14px;
+  color: var(--sub-color2);
+  font-family: "pretendardB";
+}
