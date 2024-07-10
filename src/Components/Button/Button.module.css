@@ -189,3 +189,12 @@ radious, font 등만 달라지는 경우
     border: 1px solid var(--text-color1);
   }
 }
+/*#444444 -> rgb(68,68,68)*/
+.button--444444_150x40 {
+  border-radius: 8px;
+  background-color: rgba(68, 68, 68, 0.63);
+
+  &:hover {
+    background-color: rgba(68, 68, 68, 0.8);
+  }
+}
