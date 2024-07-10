@@ -3,6 +3,15 @@
   display: flex;
   gap: 15px;
   align-items: center;
+
+  position: relative;
+}
+
+.collabLink__selectIcon {
+  position: absolute;
+  z-index: 10;
+  top: 55px;
+  left: -15px;
 }
 
 .collabLink__icon {
@@ -35,4 +44,9 @@
 .collabLink__input:focus {
   border: 2px solid var(--main-color2);
   outline: none; /* 기본 outline 제거 */
+}
+
+.collabLink__input--SHORT {
+  /*크기*/
+  width: 377px;
 }
