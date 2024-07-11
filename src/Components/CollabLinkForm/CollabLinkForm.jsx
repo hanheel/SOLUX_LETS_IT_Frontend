@@ -1,4 +1,4 @@
-import Button from "../Button/Button";
+//import Button from "../Button/Button";
 import CollabLink from "../CollabLink/CollabLink";
 import styles from "./CollabLinkForm.module.css";
 
@@ -11,10 +11,6 @@ const CollabLinkForm = ({ type }) => {
     {
       id: 1,
       link: "http://www.notion.org",
-    },
-    {
-      id: 2,
-      link: "https://www.atlassian.com/software/jira",
     },
   ];
 
@@ -30,9 +26,9 @@ const CollabLinkForm = ({ type }) => {
           <CollabLink key={link.id} link={link.link} />
         ))}
       </div>
-      <div className={styles.collabLinkForm__button}>
+      {/*<div className={styles.collabLinkForm__button}>
         <Button text="+ 추가" type="NONE__TEXT-TC2" />
-      </div>
+      </div>*/}
     </div>
   );
 };

@@ -20,28 +20,29 @@
 }
 .collabLinkForm__linkItem--SCROLL {
   /* 스크롤 가능 */
-  max-height: 110px;
-  overflow-y: auto;
+  /*max-height: 110px;
+  overflow-y: auto;*/
 }
 
 /* 스크롤바 스타일링 */
+/*
 .collabLinkForm__linkItem--SCROLL::-webkit-scrollbar {
-  width: 8px; /* 스크롤바 너비 */
+  width: 8px; 
 }
 
 .collabLinkForm__linkItem--SCROLL::-webkit-scrollbar-track {
-  background: var(--dimmed); /* 스크롤바 트랙 색상 */
-  border-radius: 10px; /* 스크롤바 트랙 둥글기 */
+  background: var(--dimmed); /
+  border-radius: 10px; 
 }
 
 .collabLinkForm__linkItem--SCROLL::-webkit-scrollbar-thumb {
-  background: var(--line-color); /* 스크롤바 색상 */
-  border-radius: 10px; /* 스크롤바 둥글기 */
+  background: var(--line-color); 
+  border-radius: 10px; 
 }
 
 .collabLinkForm__linkItem--SCROLL::-webkit-scrollbar-thumb:hover {
-  background: var(--text-color2); /* 스크롤바 색상 (hover) */
-}
+  background: var(--text-color2); 
+}*/
 
 .collabLinkForm__button {
   /*배치*/
