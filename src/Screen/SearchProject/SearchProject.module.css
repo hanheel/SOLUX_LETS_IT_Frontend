@@ -1,0 +1,23 @@
+.searchp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.searchp__content {
+    display: flex;
+    width: 100%;
+    max-width: 1320px;
+    justify-content: space-between;
+}
+
+.sidenav {
+    flex: 1;
+    max-width: 20%;
+}
+
+.mainContent {
+    flex: 4;
+    max-width: 80%;
+}

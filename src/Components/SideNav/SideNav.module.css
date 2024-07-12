@@ -1,0 +1,27 @@
+.sidenav{
+    position: sticky;
+    width: 130px;
+    height: 200px;
+    margin-right: 70px;
+}
+.sidenav__container{
+    background-color: var(--sub-color);
+    border-radius: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.sidenav__item{
+    width: 130px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    cursor: pointer;
+    font-family: 'pretendardM';
+}
+.sidenav__item:hover{
+    color: var(--main-color2);
+}

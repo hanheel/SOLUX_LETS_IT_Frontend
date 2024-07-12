@@ -1,0 +1,76 @@
+.title{
+    font-family: 'pretendardM';
+    font-size: 30px;
+    font-weight: bold;
+     margin-bottom: 20px;
+}
+
+.container {
+    background-color: #F1F1F5; /* 전체 배경 색상 */
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'pretendardM';
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 50px;
+    display: flex;
+    gap: 50px;
+    justify-content: center; /* 가로 방향으로 가운데 정렬 */
+   
+}
+
+.button {
+    padding-top: 25px;
+}
+
+
+.buttonContainer {
+    display: grid;
+    max-width: 100%;
+    padding: 10px;
+    background-color: white; /* 버튼 영역 배경 색상 */
+    border-radius: 10px;
+   
+}
+
+.nav__searchBar_container{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex: 1;
+}
+.nav__searchBar{
+    width: 400px;
+    height: 3px;
+    border-radius: 10px;
+    padding: 18px;
+    
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+.nav__searchbar_input{
+    border: none;
+    height: 30px;
+    flex: 1;
+}
+.nav__searchbar_input:focus{
+    outline: none;
+}
+.nav__searchbar_input::placeholder{
+    color: var(--text-color2);
+}
+.nav__searchbar_input:focus::placeholder{
+    color: transparent;
+}
+.nav__searchIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.searchb{
+    padding-top: 30px;
+    padding-left: 285px;
+}

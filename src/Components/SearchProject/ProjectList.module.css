@@ -1,0 +1,81 @@
+/* ProjectList.module.css */
+
+.projectList {
+    
+    align-items: center;
+    
+    gap: 10px;
+    
+    padding: 3vw;
+    
+    
+    
+  }
+
+  .stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px; /* 각 tech 요소 사이의 간격을 조정 */
+    font-family: 'pretendardM';
+    font-size: 13px;
+    font-weight: lighter;
+    
+  }
+  
+  .tech {
+    background-color: var(--select-color);
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    white-space: nowrap; /* 텍스트가 한 줄에 표시되도록 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .projectItem {
+    background-color: white;
+    align-content: center;
+    border-bottom: 1px solid var(--line-color);
+    display: flex;
+    
+    padding: 1vw;
+    width: 65vw;
+    gap: 3vw;
+  }
+
+  .projectItem > div {
+    /* 각 자식 div의 고정 너비를 설정 */
+    flex: 0 0 15vw; /* 여기서는 각 자식 div를 20vw로 고정 */
+    align-content: center;
+  }
+
+  .projectcontent {
+    display: -webkit-box;      /* 플렉스 박스 레이아웃 사용 */
+    -webkit-box-orient: vertical;  /* 박스를 수직으로 설정 */
+    overflow: hidden;          /* 넘치는 텍스트 숨김 */
+    text-overflow: ellipsis;   /* 말줄임표(...) 표시 */
+    -webkit-line-clamp: 2;     /* 두 줄까지만 표시 */
+    line-clamp: 2;             /* 두 줄까지만 표시 (표준 속성, 일부 브라우저에서 지원) */
+    color: gray;
+    font-size: 13px;
+    
+  }
+  
+  
+  .projectTitle {
+    font-weight: bold;
+    align-content: center;
+  }
+  
+  .projectPeriod,
+  .projectLocation,
+  .projectOnoff,
+  .projectDifficulty {
+    
+    font-size: 13px;
+    align-content: center;
+  }
+  

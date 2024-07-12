@@ -1,0 +1,12 @@
+.routename{
+    width: 1320px;
+    margin-top: 50px;
+    display: flex;
+
+}
+.routename__item{
+    font-size: 28px;
+    font-family: 'pretendardB';
+    display: flex;
+    align-items: center;
+}

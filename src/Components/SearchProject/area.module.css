@@ -1,0 +1,56 @@
+.container {
+    background-color: #F1F1F5; /* 전체 배경 색상 */
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'pretendardM';
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.buttonContainer {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 한 줄에 7개의 버튼 */
+    max-width: 100%;
+    padding: 10px;
+    background-color: white; /* 버튼 영역 배경 색상 */
+    border-radius: 10px;
+}
+
+.stateButton {
+    height: 50px; /* 고정된 높이 */
+    background-color: white;
+    border: 1px solid gray;
+    color: gray;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* padding 포함하여 크기 계산 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -0.5px;
+}
+
+.stateButton:hover {
+    border-color: blue;
+    color: blue;
+}
+
+.sub:hover {
+    
+    color: blue;
+}
+
+.subAreaContainer {
+    margin-top: 20px;
+}
+
+.subAreaContainer h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}

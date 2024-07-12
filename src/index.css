@@ -1,0 +1,39 @@
+
+@font-face {
+    font-family: 'pretendardR';
+    src: url('./Fonts/Pretendard-Regular.woff');
+}
+
+@font-face {
+    font-family: 'pretendardM';
+    src: url('./Fonts/Pretendard-Medium.woff');
+}
+
+@font-face {
+    font-family: 'pretendardB';
+    src: url('./Fonts/Pretendard-SemiBold.woff');
+}
+:root{
+    --main-color: #1e5eff;
+    --main-color2: #1e90ff;
+
+    --sub-color: #cddef2;
+    --sub-color2: #607fea;
+    --sub-color3: #9cc9fd;
+
+    --select-color: #e0e0e0;
+    --line-color: #d0d0d0;
+    
+    --point: #da0000;
+    --dimmed: #f1f1f5;
+
+    --header-text: #444444;
+    --text-color1: #333333;
+    --text-color2: #797979;
+
+}
+button{
+    border: none;
+    background: none;
+    cursor: pointer;
+}

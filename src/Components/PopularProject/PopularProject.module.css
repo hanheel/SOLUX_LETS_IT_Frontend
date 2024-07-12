@@ -1,0 +1,9 @@
+.text{
+    margin-top: 3vw;
+    margin-left: 13vw;
+    font-family: 'pretendardM';
+}
+
+.bgcolor{
+    background-color: var(--select-color);
+}
