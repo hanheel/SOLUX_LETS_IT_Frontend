@@ -1,0 +1,70 @@
+/* ProjectList.module.css */
+
+.projectList {
+  
+    
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    border-radius: 15px;
+    padding: 3vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    
+    
+  }
+
+  .saveIcon {
+    position: absolute;
+    top: 8px; /* Adjust as needed */
+    right: 8px; /* Adjust as needed */
+    width: 24px; /* Adjust size if necessary */
+    height: 24px; /* Adjust size if necessary */
+  }
+
+  .stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px; /* 각 tech 요소 사이의 간격을 조정 */
+    font-family: 'pretendardM';
+    font-size: 13px;
+    font-weight: lighter;
+    
+  }
+  
+  .tech {
+    background-color: var(--select-color);
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    white-space: nowrap; /* 텍스트가 한 줄에 표시되도록 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .projectItem {
+    position: relative; 
+    background-color: white;
+    align-content: center;
+    border-radius: 10px;
+    border: 1px solid var(--select-color);
+    padding: 3vw;
+    width: 100vw;
+    
+  }
+  
+  .projectTitle {
+    font-weight: bold;
+  }
+  
+  .projectPeriod,
+  .projectLocation,
+  .projectOnoff,
+  .projectDifficulty {
+    color: gray;
+    font-size: 13px;
+  }
+  
