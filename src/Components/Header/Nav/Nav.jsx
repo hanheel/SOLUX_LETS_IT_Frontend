@@ -3,7 +3,7 @@ import Logo from "../../../Image/Logo.svg?react";
 import SearchIcon from "../../../Image/Icons/SearchIcon";
 import BellIcon from "../../../Image/Icons/BellIcon";
 import { Link, useNavigate } from "react-router-dom";
-import useHover from "../useHover";
+import useHover from "../../../Hooks/useHover";
 
 const Nav = () => {
   //로고 클릭 시 홈화면 이동
