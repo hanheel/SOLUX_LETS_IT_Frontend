@@ -4,8 +4,9 @@ import useHover from "../useHover";
 
 const Nav2 = () => {
   //로고 클릭 시 main으로 이동
+  const navigate = useNavigate();
   const navigateTo = (link) => {
-    navigate(`${link}`);
+    navigate(link);
   };
 
   const { ishovered, activeditem, handleMouseEnter, handleMouseLeave } =
@@ -50,28 +51,33 @@ const Nav2 = () => {
             </Link>
 
             {/*내 프로젝트 */}
-            <li
-              className={styles.nav2__content}
-              onMouseEnter={() => handleMouseEnter("내 프로젝트")}
-              onMouseLeave={handleMouseLeave}
-            >
-              내 프로젝트
-              {ishovered && activeditem == "내 프로젝트" && (
-                <ul className={styles.nav2__subnav}>
-                  <Link to="myproj/hiring-and-applied">
-                    <li className={styles.nav2__subnav_item}>
-                      구인/신청 프로젝트
-                    </li>
-                  </Link>
-                  <Link to="myproj/attendproj">
-                    <li className={styles.nav2__subnav_item}> 참여 프로젝트</li>
-                  </Link>
-                  <Link to="myproj/scrap">
-                    <li className={styles.nav2__subnav_item}>스크랩</li>
-                  </Link>
-                </ul>
-              )}
-            </li>
+            <Link to="myproj/hiring-and-applied">
+              <li
+                className={styles.nav2__content}
+                onMouseEnter={() => handleMouseEnter("내 프로젝트")}
+                onMouseLeave={handleMouseLeave}
+              >
+                내 프로젝트
+                {ishovered && activeditem == "내 프로젝트" && (
+                  <ul className={styles.nav2__subnav}>
+                    <Link to="myproj/hiring-and-applied">
+                      <li className={styles.nav2__subnav_item}>
+                        구인/신청 프로젝트
+                      </li>
+                    </Link>
+                    <Link to="myproj/attendproj">
+                      <li className={styles.nav2__subnav_item}>
+                        {" "}
+                        참여 프로젝트
+                      </li>
+                    </Link>
+                    <Link to="myproj/scrap">
+                      <li className={styles.nav2__subnav_item}>스크랩</li>
+                    </Link>
+                  </ul>
+                )}
+              </li>
+            </Link>
           </ul>
         </div>
         <button
