@@ -90,29 +90,36 @@ export const RouterInfo = [
 
       //마이페이지
       {
-        path: "mypage/profile",
+        path: "mypage",
         element: <MyPageLayout />,
         label: "프로필 관리",
-      },
-      {
-        path: "mypage/portfolio",
-        element: <MyPageLayout />,
-        label: "포트폴리오 관리",
-      },
-      {
-        path: "mypage/portfolio/post",
-        element: <MyPageLayout />,
-        label: "포트폴리오 작성창",
-      },
-      {
-        path: "mypage/portfolio/post/summaryAI",
-        element: <MyPageLayout />,
-        label: "AI 생성 - 완성된 포트폴리오",
-      },
-      {
-        path: "mypage/portfolio/board",
-        element: <MyPageLayout />,
-        label: "포트폴리오 게시판",
+        children: [
+          {
+            path: "profile",
+            element: <MyProfile />,
+            label: "포트폴리오 관리",
+          },
+          {
+            path: "portfolio",
+            element: <MyPortfolio />,
+            label: "포트폴리오 관리",
+          },
+          {
+            path: "portfolio/post",
+            element: <PortfolioWrite />,
+            label: "포트폴리오 작성창",
+          },
+          {
+            path: "portfolio/post/summaryAI",
+            element: <CompletePort />,
+            label: "AI 생성 - 완성된 포트폴리오",
+          },
+          {
+            path: "portfolio/board",
+            element: <PortfolioBoard />,
+            label: "포트폴리오 게시판",
+          },
+        ],
       },
 
       //팀 게시판
