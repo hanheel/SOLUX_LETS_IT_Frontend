@@ -24,6 +24,7 @@ import PortfolioBoard from "./MyPage/MyPortfolio/PortfolioBoard/PortfolioBoard";
 import MainLayout from "../MainLayout";
 import ProjPost_detail from "./ProjPost_detail/ProjPost_detail";
 import ProjectHire from "./ProjectHire/ProjectHire";
+import MyPageLayout from "./MyPage/MyPageLayout";
 
 export const RouterInfo = [
   {
@@ -90,27 +91,27 @@ export const RouterInfo = [
       //마이페이지
       {
         path: "mypage/profile",
-        element: <MyProfile />,
+        element: <MyPageLayout />,
         label: "프로필 관리",
       },
       {
         path: "mypage/portfolio",
-        element: <MyPortfolio />,
+        element: <MyPageLayout />,
         label: "포트폴리오 관리",
       },
       {
         path: "mypage/portfolio/post",
-        element: <PortfolioWrite />,
+        element: <MyPageLayout />,
         label: "포트폴리오 작성창",
       },
       {
         path: "mypage/portfolio/post/summaryAI",
-        element: <CompletePort />,
+        element: <MyPageLayout />,
         label: "AI 생성 - 완성된 포트폴리오",
       },
       {
         path: "mypage/portfolio/board",
-        element: <PortfolioBoard />,
+        element: <MyPageLayout />,
         label: "포트폴리오 게시판",
       },
 
