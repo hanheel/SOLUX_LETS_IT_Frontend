@@ -1,79 +1,65 @@
-
-/*사이드 네비게이터 + 포트폴리오 게시판*/
-.PortfolioBoard__wrap{
-    display: flex;
-}
-
-/*포트폴리오 게시판*/
-.PortfolioBoard__contentWrap{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 70px;
-}
 /*포트폴리오명*/
-.PorfolioBoard__portfolioTitle{
-    font-size: 26px;
-    font-family: 'pretendardB';
-    text-align: center;
+.PorfolioBoard__portfolioTitle {
+  font-size: 26px;
+  font-family: "pretendardB";
+  text-align: center;
 }
 
 /*포트폴리오 리스트 전체 (행제목 포함)*/
-.PortfolioBoard__table{
-    display: table;
-    margin: 20px 0;
+.PortfolioBoard__table {
+  display: table;
+  margin: 20px 0;
 }
 
 /*모든 행 열너비 지정*/
-.PortfolioBoard__table ul{
-    display: grid;
-    grid-template-columns: 100px 700px 200px 100px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.PortfolioBoard__table ul {
+  display: grid;
+  grid-template-columns: 100px 700px 200px 100px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 /*모든 행 텍스트 수직, 수평 중앙 정렬*/
-.PortfolioBoard__table ul > li{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
+.PortfolioBoard__table ul > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
 }
 
 /*순번 행 요소 color 설정*/
-.PortfolioBoard__list li:nth-of-type(1){
-    color: var(--main-color2)
+.PortfolioBoard__list li:nth-of-type(1) {
+  color: var(--main-color2);
 }
 /*제목 부분에 커서 올릴 시 포인터 모양으로 변경*/
-.PortfolioBoard__list li:nth-of-type(2){
-    cursor: pointer;
-    &:hover{
-        text-decoration: underline;
-    }
+.PortfolioBoard__list li:nth-of-type(2) {
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-.PortfolioBoard__rowHeader{
-    border-bottom: 1px solid var(--text-color2);
+.PortfolioBoard__rowHeader {
+  border-bottom: 1px solid var(--text-color2);
 }
 
 /*행제목 각 li*/
-.PortfolioBoard__headerCell{
-    display: table-cell;
+.PortfolioBoard__headerCell {
+  display: table-cell;
 }
-.PortfolioBoard__cell{
-    display: table-cell;
-    color: var(--text-color2)
+.PortfolioBoard__cell {
+  display: table-cell;
+  color: var(--text-color2);
 }
 
-.PortfolioBoard__list{
-    border-bottom: 1px solid var(--line-color);
+.PortfolioBoard__list {
+  border-bottom: 1px solid var(--line-color);
 }
 
 /*AI포트폴리오 전환 + 글쓰기 버튼*/
-.PortfolioBoard__btnWrap{
-    display: flex;
-    gap: 15px;
-    width: 100%;
-    justify-content: right;
+.PortfolioBoard__btnWrap {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  justify-content: right;
 }

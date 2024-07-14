@@ -1,10 +1,10 @@
-.myPage {
+.myProject {
   width: 1320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.myPage__sideNav {
+.myProject__sideNav {
   height: 100vh;
   margin: 0 30px;
   display: flex;

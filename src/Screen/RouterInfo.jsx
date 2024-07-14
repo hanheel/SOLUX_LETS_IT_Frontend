@@ -25,6 +25,7 @@ import MainLayout from "../MainLayout";
 import ProjPost_detail from "./ProjPost_detail/ProjPost_detail";
 import ProjectHire from "./ProjectHire/ProjectHire";
 import MyPageLayout from "./MyPage/MyPageLayout";
+import MyProjectLayout from "./MyProject/MyProjectLayout";
 
 export const RouterInfo = [
   {
@@ -73,19 +74,26 @@ export const RouterInfo = [
 
       //내 프로젝트
       {
-        path: "myproj/hiring-and-applied",
-        element: <ApplyHireProj />,
+        path: "myproj",
+        element: <MyProjectLayout />,
         label: "구인/신청 프로젝트",
-      },
-      {
-        path: "myproj/attendproj",
-        element: <AttendProj />,
-        label: "참여 프로젝트",
-      },
-      {
-        path: "myproj/scrap",
-        element: <Scrap />,
-        label: "스크랩 프로젝트",
+        children: [
+          {
+            path: "hiring-and-applied",
+            element: <ApplyHireProj />,
+            label: "구인/신청 프로젝트",
+          },
+          {
+            path: "attendproj",
+            element: <AttendProj />,
+            label: "참여 프로젝트",
+          },
+          {
+            path: "scrap",
+            element: <Scrap />,
+            label: "스크랩 프로젝트",
+          },
+        ],
       },
 
       //마이페이지

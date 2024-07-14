@@ -1,13 +1,8 @@
 import Button from "../../../../Components/Button/Button";
-import RouteName from "../../../../Components/RouteName/RouteName";
-import SideNav from "../../../../Components/SideNav/SideNav";
 import styles from "./PortfolioBoard.module.css";
 import { useState } from "react";
 import Paging from "../../../../Components/Paging/Paging";
 import { useNavigate } from "react-router-dom";
-
-const route = ["마이페이지", "포트폴리오 관리", "포트폴리오 게시판"];
-const sidenavCont = ["프로필 관리", "포트폴리오 관리", "개인정보 수정"];
 
 //mock data
 const mockData = [
