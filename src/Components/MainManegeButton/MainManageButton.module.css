@@ -1,0 +1,40 @@
+.nav{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'pretendardM';
+    margin-top: 6vw;
+    
+    
+    
+    background-color: var(--sub-color3);
+    
+}
+
+.box{
+    background-color: white;
+    width: 10vw;
+    height: 10vw;
+    align-content: center;
+    text-align: center;
+    margin: 3.5vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    border-radius: 5px; /* 테두리를 둥글게 */
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+    
+}
+
+.triangle {
+    margin-top: 2vw;
+    border-left: 3vw solid transparent;
+    border-right: 3vw solid transparent;
+    border-bottom: 4vw solid var(--sub-color3);; /* 삼각형의 색상과 크기 설정 */
+    position: absolute; 
+    left: 47%;
+    
+    
+    
+    
+  }

@@ -1,0 +1,21 @@
+.buttonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.button {
+    
+    background-color: lightgray; /* Green background */
+    border: none; /* Remove borders */
+    
+    font-size: 12px; /* Set a font size */
+    cursor: pointer; /* Add a pointer on hover */
+    border-radius: 20px;
+    width: 70px;
+}
+
+.button:hover {
+    background-color: var(--main-color2); /* Darker green */
+    opacity: 0.8; 
+}
