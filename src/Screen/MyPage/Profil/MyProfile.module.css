@@ -1,9 +1,0 @@
-.myprofile{
-    display: grid;
-    grid-template-rows: 100px;
-    width: 1320px;
-}
-.myprofile__content{
-    margin-top: 30px;
-    display: flex;
-}
