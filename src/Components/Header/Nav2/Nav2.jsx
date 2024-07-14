@@ -1,99 +1,78 @@
-import { useState } from "react";
 import styles from "./Nav2.module.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import useHover from "../useHover";
 
 const Nav2 = () => {
-  const navigate = useNavigate();
-  const headerLink = ["projects/home", "myproj/hiring-and-applied"];
-  const subNavLink = {
-    "프로젝트 찾기": [
-      "projects/home",
-      "projects/area",
-      "projects/field",
-      "projects/fit",
-    ],
-    "내 프로젝트": [
-      "myproj/hiring-and-applied",
-      "myproj/attendproj",
-      "myproj/scrap",
-    ],
-  };
-
+  //로고 클릭 시 main으로 이동
   const navigateTo = (link) => {
     navigate(`${link}`);
   };
-  const navCont = [
-    "프로젝트 찾기",
-    "내 프로젝트",
-    /*"공모전/뉴스레터",
-    "렛츠IT 커뮤니티",*/
-  ];
-  const subNavCont = {
-    "프로젝트 찾기": [
-      "전체 프로젝트",
-      "지역으로 찾기",
-      "분야로 찾기",
-      "내 맞춤 프로젝트",
-    ],
-    "내 프로젝트": ["구인/신청 프로젝트", "참여 프로젝트", "스크랩"],
-  };
 
-  const [hoverState, setHoverState] = useState({
-    "프로젝트 찾기": false,
-    "내 프로젝트": false,
-    // "공모전/뉴스레터": false,
-    // "렛츠IT 커뮤니티": false,
-  });
-  //Nav / subNav data
-
-  const handleMouseEnter = (menu) => {
-    setHoverState((prevState) => ({
-      ...prevState,
-      [menu]: true,
-    }));
-  };
-
-  const handleMouseLeave = (menu) => {
-    setHoverState((prevState) => ({
-      ...prevState,
-      [menu]: false,
-    }));
-  };
-  //mouseEnter, mouseLeave시 hover state 설정
+  const { ishovered, activeditem, handleMouseEnter, handleMouseLeave } =
+    useHover();
 
   return (
     <div className={styles.nav2}>
       <div className={styles.nav2__container}>
         <div className={styles.nav2__contentsWrap}>
-          {navCont.map((menu, id) => (
-            <div
-              className={styles.nav2__contents}
-              key={id}
-              onMouseEnter={() => handleMouseEnter(menu)}
-              onMouseLeave={() => handleMouseLeave(menu)}
-            >
-              {/*헤더 네비게이터 버튼 */}
-              <button
-                onClick={() => navigateTo(headerLink[id])}
-                className={styles.nav2__button}
+          <ul>
+            {/*프로젝트 찾기*/}
+            <Link to="projects/home">
+              <li
+                className={styles.nav2__content}
+                onMouseEnter={() => handleMouseEnter("프로젝트 찾기")}
+                onMouseLeave={handleMouseLeave}
               >
-                {menu}
-              </button>
-              {hoverState[menu] && subNavCont[menu] && (
+                프로젝트 찾기
+                {ishovered && activeditem == "프로젝트 찾기" && (
+                  <ul className={styles.nav2__subnav}>
+                    <Link to="projects/home">
+                      <li className={styles.nav2__subnav_item}>
+                        전체 프로젝트
+                      </li>
+                    </Link>
+                    <Link to="projects/area">
+                      <li className={styles.nav2__subnav_item}>
+                        지역으로 찾기
+                      </li>
+                    </Link>
+                    <Link to="projects/field">
+                      <li className={styles.nav2__subnav_item}>분야로 찾기</li>
+                    </Link>
+                    <Link to="projects/fit">
+                      <li className={styles.nav2__subnav_item}>
+                        내 맞춤 프로젝트
+                      </li>
+                    </Link>
+                  </ul>
+                )}
+              </li>
+            </Link>
+
+            {/*내 프로젝트 */}
+            <li
+              className={styles.nav2__content}
+              onMouseEnter={() => handleMouseEnter("내 프로젝트")}
+              onMouseLeave={handleMouseLeave}
+            >
+              내 프로젝트
+              {ishovered && activeditem == "내 프로젝트" && (
                 <ul className={styles.nav2__subnav}>
-                  {subNavCont[menu].map((item, itemId) => (
-                    <li
-                      onClick={() => navigateTo(subNavLink[menu][itemId])}
-                      className={styles.nav2__subnav_item}
-                      key={itemId}
-                    >
-                      {item}
+                  <Link to="myproj/hiring-and-applied">
+                    <li className={styles.nav2__subnav_item}>
+                      구인/신청 프로젝트
                     </li>
-                  ))}
+                  </Link>
+                  <Link to="myproj/attendproj">
+                    <li className={styles.nav2__subnav_item}> 참여 프로젝트</li>
+                  </Link>
+                  <Link to="myproj/scrap">
+                    <li className={styles.nav2__subnav_item}>스크랩</li>
+                  </Link>
                 </ul>
               )}
-            </div>
-          ))}
+            </li>
+          </ul>
         </div>
         <button
           className={styles.nav2__writeBtn}

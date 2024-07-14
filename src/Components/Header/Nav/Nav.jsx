@@ -1,42 +1,17 @@
-import { useState } from "react";
 import styles from "./Nav.module.css";
 import Logo from "../../../Image/Logo.svg?react";
 import SearchIcon from "../../../Image/Icons/SearchIcon";
 import BellIcon from "../../../Image/Icons/BellIcon";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import useHover from "../useHover";
 
 const Nav = () => {
-  // eslint-disable-next-line react/jsx-key
-  const navCont = ["로그아웃", "마이페이지", <BellIcon />];
-  const subNavLink = ["mypage/profile", "mypage/portfolio", ""];
-
   //로고 클릭 시 홈화면 이동
   const navigate = useNavigate();
-  const navigateTo = (link) => {
-    navigate(`${link}`);
+  const navigateTo = () => {
+    navigate("/");
   };
-
-  const [hoverState, setHoverState] = useState({
-    마이페이지: false,
-  });
-
-  const subNavCont = {
-    마이페이지: ["프로필 관리", "포트폴리오 관리", "개인정보 수정"],
-  };
-
-  const handleMouseEnter = (menu) => {
-    setHoverState((prevState) => ({
-      ...prevState,
-      [menu]: true,
-    }));
-  };
-
-  const handleMouseLeave = (menu) => {
-    setHoverState((prevState) => ({
-      ...prevState,
-      [menu]: false,
-    }));
-  };
+  const { ishovered, handleMouseEnter, handleMouseLeave } = useHover();
 
   return (
     <div className={styles.nav}>
@@ -48,6 +23,7 @@ const Nav = () => {
             navigateTo("/");
           }}
         />
+        {/*검색바 */}
         <div className={styles.nav__searchBar_container}>
           <div className={styles.nav__searchBar}>
             <input
@@ -60,40 +36,32 @@ const Nav = () => {
           </div>
         </div>
 
-        <div className={styles.nav__contentsWrap}>
-          {navCont.map((menu, id) => (
-            <div
-              className={styles.nav__contents}
-              key={id}
-              onMouseEnter={() => handleMouseEnter(menu)}
-              onMouseLeave={() => handleMouseLeave(menu)}
-            >
-              {" "}
-              {/*mouse enter / leave에 따라 서브네비게이터가 작동되도록 함*/}
-              <button
-                className={styles.nav__button}
-                onClick={() => navigateTo("mypage/profile")}
-              >
-                {menu}
-              </button>
-              {/*네비게이터 버튼*/}
-              {hoverState[menu] && subNavCont[menu] && (
+        {/*상단 네비게이터 */}
+        <ul className={styles.nav__contentsWrap}>
+          <li>로그아웃</li>
+          <Link to="mypage/profile">
+            <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              마이페이지
+              {/*서브 네비게이터 */}
+              {ishovered && (
                 <ul className={styles.nav__subnav}>
-                  {subNavCont[menu].map((item, itemId) => (
-                    <li
-                      onClick={() => navigateTo(subNavLink[itemId])}
-                      key={itemId}
-                      className={styles.nav__subnav_item}
-                    >
-                      {item}
+                  <Link to="mypage/profile">
+                    <li>프로필 관리</li>
+                  </Link>
+                  <Link to="mypage/portfolio">
+                    <li onClick={() => navigateTo("mypage/portfolio")}>
+                      포트폴리오 관리
                     </li>
-                  ))}
+                  </Link>
+                  <li onClick={() => alert("수정중")}>개인정보 수정</li>
                 </ul>
               )}
-              {/*네비게이터 서브 버튼*/}
-            </div>
-          ))}
-        </div>
+            </li>
+          </Link>
+          <li>
+            <BellIcon />
+          </li>
+        </ul>
       </div>
     </div>
   );

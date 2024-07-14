@@ -1,6 +1,6 @@
-.header{
-    width: 100vw;
-    height: 120px;
-    position: sticky;
-    z-index: 1000;
+.header {
+  width: 100vw;
+  height: 120px;
+  position: sticky;
+  z-index: 1000;
 }
