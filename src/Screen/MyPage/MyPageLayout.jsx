@@ -12,7 +12,7 @@ const MyPageLayout = () => {
   const path = location.pathname;
   //루트 네임 - js 파일 분리
   let { name, subName } = getRouteNames(path);
-  const route = ["마이페이지", name && `${name}`, subName && `${name}`];
+  const route = ["마이페이지", name && `${name}`, subName && `${subName}`];
   //사이드 nav 링크
   const link = ["/mypage/profile", "/mypage/portfolio"];
 
