@@ -1,0 +1,16 @@
+.briefProfile__bio {
+  /*바이오*/
+  width: 250px;
+  font-size: 20px;
+  color: var(--text-color1);
+}
+.briefProfile {
+  display: flex;
+  flex-direction: column;
+}
+.briefProfile__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}

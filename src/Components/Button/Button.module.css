@@ -198,3 +198,12 @@ radious, font 등만 달라지는 경우
     background-color: rgba(68, 68, 68, 0.8);
   }
 }
+/*main-color2 180x40*/
+.button--MC2_180x40 {
+  width: 180px;
+  background-color: var(--main-color2);
+  border-radius: 8px;
+  &:hover {
+    background-color: var(--main2-hover-color);
+  }
+}

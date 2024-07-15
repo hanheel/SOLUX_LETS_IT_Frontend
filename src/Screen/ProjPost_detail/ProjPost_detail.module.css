@@ -1,0 +1,110 @@
+.ProjPost_detail {
+  width: 100%;
+}
+
+.ProjPost_detail > main {
+  width: 1320px;
+  margin: 0 auto;
+}
+
+.ProjPost_detail__route {
+  border-bottom: 1px solid var(--line-color);
+}
+
+.ProjPost_detail__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.ProjPost_detail__label {
+  font-size: 24px;
+  font-family: "pretendardB";
+  color: var(--text-color1);
+  align-self: flex-start;
+  width: 150px;
+}
+
+.ProjPost_detail__description {
+  width: 1100px;
+  white-space: pre-wrap;
+}
+
+.ProjPost_detail__commentsWarp {
+  margin-bottom: 100px;
+  padding: 50px;
+  background-color: var(--dimmed);
+  display: flex;
+  justify-content: center;
+}
+
+.ProjPost_detail__commentsContainer {
+  width: 1320px;
+  display: flex;
+}
+.ProjPost_detail__commentsContainer > .ProjPost_detail__label {
+  margin-left: 40px;
+  width: 150px;
+}
+
+.ProjPost_detail__commentsContainer > .ProjPost_detail__label > span {
+  color: var(--main-color2);
+}
+
+.ProjPost_detail__commentsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ProjPost_detail__commentList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ProjPost_detail__commentInput {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.ProjPost_detail__commentInput > input {
+  width: 860px;
+  height: 50px;
+  background-color: white;
+  border-radius: 20px;
+  color: var(--text-color1);
+  padding-left: 20px;
+  &:focus {
+    outline: none;
+    border: 2px solid var(--main-color2);
+  }
+}
+
+.ProjPost_detail > footer {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  background-color: white;
+  border-top: 1px solid var(--line-color);
+}
+
+.ProjPost_detail__scrap {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    border-color: var(--main-color2);
+  }
+}

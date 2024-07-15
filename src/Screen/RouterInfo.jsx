@@ -26,6 +26,9 @@ import ProjPost_detail from "./ProjPost_detail/ProjPost_detail";
 import ProjectHire from "./ProjectHire/ProjectHire";
 import MyPageLayout from "./MyPage/MyPageLayout";
 import MyProjectLayout from "./MyProject/MyProjectLayout";
+import Apply from "./Apply/Apply";
+import MyPageLayout from "./MyPage/MyPageLayout";
+import MyProjectLayout from "./MyProject/MyProjectLayout";
 
 export const RouterInfo = [
   {
@@ -182,6 +185,12 @@ export const RouterInfo = [
         path: "profile/new",
         element: <CreateProfile />,
         label: "최초 1회 프로필 생성",
+      },
+      //프로젝트 신청창
+      {
+        path: "apply",
+        element: <Apply />,
+        label: "프로젝트 신청창",
       },
     ],
   },

@@ -1,0 +1,97 @@
+/*창 전체*/
+.apply {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 110px;
+}
+/*프로필 미리보기 title + 프로필*/
+.apply__profile {
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.apply__title {
+  font-size: 24px;
+  font-family: "pretendardB";
+  text-align: center;
+}
+/*프로필 미리보기*/
+.apply__profile_container {
+  width: 100%;
+  height: 400px;
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--line-color);
+  border-radius: 8px;
+}
+/*지원서*/
+.apply__form {
+  width: 760px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, auto);
+  position: relative;
+}
+/*input 기본 css */
+.apply__input {
+  border: 1px solid var(--line-color);
+  border-radius: 8px;
+  width: 260px;
+  height: 40px;
+  padding: 0 15px;
+  resize: none;
+  &:focus {
+    outline: none;
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+}
+.apply__input--textarea {
+  width: 730px;
+  height: 160px;
+  padding: 15px;
+}
+
+.apply__container {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 10px;
+  &:nth-child(1) {
+    grid-row: 1;
+    grid-column: span 1;
+  }
+  &:nth-child(2) {
+    grid-row: 2;
+    grid-column: span 1;
+  }
+  &:nth-child(3) {
+    grid-row: 2;
+    grid-column: span1;
+  }
+  &:nth-child(4) {
+    grid-row: 3;
+    grid-column: span 2;
+  }
+  &:nth-child(5) {
+    grid-row: 4;
+    grid-column: span 2;
+  }
+}
+.apply__container span {
+  color: var(--main-color2);
+}
+.button__container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

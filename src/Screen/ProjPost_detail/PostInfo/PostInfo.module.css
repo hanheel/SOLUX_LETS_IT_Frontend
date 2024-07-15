@@ -1,0 +1,136 @@
+.PostInfo {
+  width: 1320px;
+  margin: 0 auto;
+}
+
+.PostInfo__container {
+  border-bottom: 1px solid var(--line-color);
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.PostInfo__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.PostInfo__title {
+  /* 크기 */
+  width: fit-content;
+  height: 45px;
+  /* 배경 */
+  background-color: var(--sub-color);
+  border-radius: 8px;
+  /* 폰트 */
+  font-size: 24px;
+  font-family: "pretendardB";
+  /* 내부 여백 */
+  padding: 0 10px;
+  /* 텍스트 배치 */
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.PostInfo__body {
+  display: flex;
+}
+
+.PostInfo__postInfo,
+.PostInfo__projInfo,
+.PostInfo__skillInfo {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.PostInfo__postInfo {
+  margin-top: 20px;
+}
+
+.PostInfo__postInfo > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.PostInfo__postInfo > div > .PostInfo__subLabel {
+  width: 80px;
+  /* 폰트 */
+  color: var(--text-color2);
+  font-size: 18px;
+  font-family: "pretendardB";
+}
+
+.PostInfo__preferred {
+  width: 210px;
+  word-wrap: break-word;
+}
+
+.PostInfo__projInfoDetail {
+  display: flex;
+  flex-direction: column;
+}
+
+.PostInfo__projInfoDetail > div {
+  display: flex;
+  align-items: center;
+}
+
+.PostInfo__label,
+.PostInfo__label {
+  /* 폰트 */
+  color: var(--text-color1);
+  font-size: 24px;
+  font-family: "pretendardB";
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.PostInfo__projInfoDetail > div > .PostInfo__subLabel {
+  width: 80px;
+  /* 폰트 */
+  color: var(--text-color2);
+  font-size: 16px;
+}
+
+.PostInfo__label > span {
+  color: var(--main-color2);
+  font-size: 14px;
+  font-family: "pretendardR";
+}
+
+.PostInfo__skillInfo {
+  width: 550px;
+}
+
+.PostInfo__skill {
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 10px;
+}
+
+.PostInfo__skill > div {
+  width: 90px;
+  height: 25px;
+  background-color: var(--select-color);
+  border-radius: 11.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.PostInfo__meta {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text-color2);
+  align-self: flex-end;
+}
